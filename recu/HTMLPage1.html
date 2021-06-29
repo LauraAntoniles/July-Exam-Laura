@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>July Advanced Web Programming Exam</title>
+</head>
+<body>
+    <h1>July Exam</h1>
+    <h2>By Laura Antoniles</h2>
+    <canvas width="600" height="200" style="border: 10px solid #FFFF00"></canvas>
+    <canvas id="arco" width="250" height="150"></canvas>
+    
+
+    <script>
+        var lienzo = document.querySelector("canvas");  
+        var context = lienzo.getContext("2d");
+        context.fillStyle = "pink";
+        context.fillRect(40, 40, 200, 100);
+        var stk = document.querySelector("canvas").getContext("2d");
+        stk.strokeStyle = "blue";
+        stk.strokeRect(270, 40, 100, 100);
+        stk.lineWidth = 5;
+        stk.strokeRect(410, 40, 100, 100);
+        
+
+        
+		var elCanvas = document.getElementById("arco");
+		if (elCanvas && elCanvas.getContext) {
+			var context = elCanvas.getContext("2d");
+			if (context) {
+				var X = elCanvas.width / 2;
+				var Y = 150;
+				var r = 100;
+				var aPartida = (Math.PI / 180) * 220;
+				var aFinal = (Math.PI / 180) * 320;
+				context.strokeStyle = "purple";
+				context.lineWidth = 30;
+				context.arc(X, Y, r, aPartida, aFinal, false);
+				context.stroke();
+			}
+		}
+
+    </script>
+</body>
+</html>
